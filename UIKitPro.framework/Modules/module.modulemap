@@ -1,0 +1,11 @@
+framework module UIKitPro {
+  umbrella header "UIKitPro.h"
+
+  export *
+  module * { export * }
+}
+
+module UIKitPro.Swift {
+    header "UIKitPro-Swift.h"
+    requires objc
+}
