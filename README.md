@@ -49,4 +49,100 @@ view.backgroundColor = UIColor.GYellow700
 
 ## The color library will not stop here will expand in the future.
 # AnchorPro System
-### Under writing.
+### UIAnchorPro Easy and powerful control in Swift
+![aps0](https://user-images.githubusercontent.com/22422080/36198521-e66e16b2-1187-11e8-8ad7-58fb0476e6ab.png)
+
+### Normal mode of Anchor work
+```
+//
+//  TopBar.swift
+//  NextBit POS
+//
+//  Created by Ali AlNaghmoush on 28/01/2018.
+//  Copyright © 2018 Ali AlNaghmoush. All rights reserved.
+//
+
+import UIKit
+import UIKitPro
+
+class NBPosController: UIViewController {
+
+    let topBar = UIView()
+    let rightBar = UIView()
+    let leftBar = UIView()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setupLayoutView()
+        
+    }
+    
+        func setupLayoutView() {
+        setupNavBar()
+        setupRightBar()
+        setupLeftBar()
+    }  
+```
+```
+    func setupNavBar() {
+        
+        view.addSubview(topBar)
+        topBar.translatesAutoresizingMaskIntoConstraints = false
+        topBar.backgroundColor = UIColor.white
+        topBar.layer.borderColor = UIColor.NBHLBlue.cgColor
+        topBar.layer.borderWidth = 1
+        
+        //Now Start Anchor Point
+        topBar.heightAnchor.constraint(equalToConstant: 91).isActive = true
+        topBar.topAnchor.constraint(equalTo: view.topAnchor, constant: -1).isActive = true
+        topBar.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: -1).isActive = true
+        topBar.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 1).isActive = true 
+    }
+```
+```
+    func setupRightBar() {
+        
+        view.addSubview(rightBar)
+        rightBar.translatesAutoresizingMaskIntoConstraints = false
+        rightBar.backgroundColor = UIColor.white
+        rightBar.layer.borderColor = UIColor.NBHLBlue.cgColor
+        rightBar.layer.borderWidth = 1
+        
+        //Now Start Anchor Point
+        topBar.heightAnchor.constraint(equalToConstant: 201).isActive = true
+        topBar.topAnchor.constraint(equalTo: topBar.bottomAnchor, constant: 0).isActive = true
+        topBar.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 1).isActive = true
+        topBar.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 1).isActive = true 
+    }
+    
+    
+    ...
+```
+### With AnchorPro System
+### no need type Request every time || `Ex.translatesAutoresizingMaskIntoConstraints = false`
+### and no need type Alone || `topAnchor، bottomAnchor، leadingAnchor،trailingAnchor`
+### and no need type Request every time || `isActive = true`
+
+```
+topBar.topAnchor.constraint(equalTo: topBar.bottomAnchor, constant: 0).isActive = true
+topBar.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 1).isActive = true
+topBar.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 1).isActive = true
+```
+### Just write Anchor || `ex.anchor(...)`
+### and chose One
+
+![aps1](https://user-images.githubusercontent.com/22422080/36198525-e9808be6-1187-11e8-83ea-1ba391fc5c8f.png)
+![aps2](https://user-images.githubusercontent.com/22422080/36198528-ebc489de-1187-11e8-80e1-d5e78e23e5b2.png)
+![aps3](https://user-images.githubusercontent.com/22422080/36198534-edf90ebe-1187-11e8-86f7-1cbfba183eb3.png)
+![aps4](https://user-images.githubusercontent.com/22422080/36198542-f0124a8a-1187-11e8-89f3-0f26afeadce2.png)
+![aps5](https://user-images.githubusercontent.com/22422080/36198556-f32ca508-1187-11e8-898f-d6908f20be24.png)
+![aps6](https://user-images.githubusercontent.com/22422080/36198559-f5b8174e-1187-11e8-9c62-0b19db5ba469.png)
+
+
+## How to use thes library
+### In the beginning,SetUp UIKitPro in Your project, and the library should be called in the file where the library code will be used as follows:
+```
+import UIKitPro
+```
+
