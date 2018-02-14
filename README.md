@@ -5,7 +5,7 @@
 ---
 # Google Color Library
 ### Google Color Library include most color grades are as follows: <p>(50 - 100 - 200 - 300 - 400 - 500 - 600 - 700 - 800 - 900)</p>
-### More Info About Googole Color: https://material.io/guidelines/style/color.html
+### More Info About Google Color: https://material.io/guidelines/style/color.html
 ![red](https://user-images.githubusercontent.com/22422080/36191285-64a28f60-116d-11e8-92b1-a8a15c91beae.png)
 ![pink](https://user-images.githubusercontent.com/22422080/36191282-6318896a-116d-11e8-9f10-dcd2922c6aec.png)
 ![purple](https://user-images.githubusercontent.com/22422080/36191281-616c91ec-116d-11e8-9589-290dbbcd3ea4.png)
