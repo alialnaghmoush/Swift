@@ -1,11 +1,12 @@
 # UIKitPro: FrameWork By Ali AlNaghmoush
 ## This FrameWork contains:
-- Google Color Library
-- AnchorPro System
+- UIColor Pro
+- UIAnchor Pro
 ---
-# Google Color Library
-### Google Color Library include most color grades are as follows: <p>(50 - 100 - 200 - 300 - 400 - 500 - 600 - 700 - 800 - 900)</p>
+# UIColor Pro
+### UIColor Pro include most Google Color grades are as follows: <p>(50 - 100 - 200 - 300 - 400 - 500 - 600 - 700 - 800 - 900)</p>
 ### More Info About Google Color: https://material.io/guidelines/style/color.html
+
 ![red](https://user-images.githubusercontent.com/22422080/36191285-64a28f60-116d-11e8-92b1-a8a15c91beae.png)
 ![pink](https://user-images.githubusercontent.com/22422080/36191282-6318896a-116d-11e8-9f10-dcd2922c6aec.png)
 ![purple](https://user-images.githubusercontent.com/22422080/36191281-616c91ec-116d-11e8-9589-290dbbcd3ea4.png)
@@ -26,7 +27,7 @@
 ![gray](https://user-images.githubusercontent.com/22422080/36191237-3ec0d194-116d-11e8-9aa2-6ccdda03879f.png)
 ![bluegray](https://user-images.githubusercontent.com/22422080/36191234-3c7d1604-116d-11e8-8a52-9979811fd501.png)
 
-## How to use thes library
+## How to use thes library Google Colors
 ### In the beginning,SetUp UIKitPro in Your project, and the library should be called in the file where the library code will be used as follows:
 ```
 import UIKitPro
@@ -46,103 +47,158 @@ let gLightGreenColor = UIColor.GLightGreen500
 
 view.backgroundColor = UIColor.GYellow700
 ```
-
 ## The color library will not stop here will expand in the future.
-# AnchorPro System
+
+---
+---
+---
+
+# UIAnchor Pro
 ### UIAnchorPro Easy and powerful control in Swift
-![aps0](https://user-images.githubusercontent.com/22422080/36198521-e66e16b2-1187-11e8-8ad7-58fb0476e6ab.png)
+![aps00](https://user-images.githubusercontent.com/22422080/36202063-5ab09d1e-1193-11e8-843c-49b22bc5e5b4.png)
+### The normal way of Anchor work in Swift Ex:
 
-### Normal mode of Anchor work
 ```
-//
-//  TopBar.swift
-//  NextBit POS
-//
-//  Created by Ali AlNaghmoush on 28/01/2018.
-//  Copyright © 2018 Ali AlNaghmoush. All rights reserved.
-//
+    ...
 
-import UIKit
-import UIKitPro
-
-class NBPosController: UIViewController {
-
-    let topBar = UIView()
-    let rightBar = UIView()
-    let leftBar = UIView()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        setupLayoutView()
-        
-    }
-    
-        func setupLayoutView() {
-        setupNavBar()
-        setupRightBar()
-        setupLeftBar()
-    }  
-```
-```
     func setupNavBar() {
         
+        // Build Subview ===============================
         view.addSubview(topBar)
         topBar.translatesAutoresizingMaskIntoConstraints = false
-        topBar.backgroundColor = UIColor.white
-        topBar.layer.borderColor = UIColor.NBHLBlue.cgColor
-        topBar.layer.borderWidth = 1
         
-        //Now Start Anchor Point
+        //Now Start Anchor Point normal way ===============================
         topBar.heightAnchor.constraint(equalToConstant: 91).isActive = true
         topBar.topAnchor.constraint(equalTo: view.topAnchor, constant: -1).isActive = true
         topBar.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: -1).isActive = true
         topBar.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 1).isActive = true 
     }
+    
+    ...
+    
 ```
 ```
+    ...
+    
     func setupRightBar() {
         
+        // Build Subview ===============================
         view.addSubview(rightBar)
         rightBar.translatesAutoresizingMaskIntoConstraints = false
-        rightBar.backgroundColor = UIColor.white
-        rightBar.layer.borderColor = UIColor.NBHLBlue.cgColor
-        rightBar.layer.borderWidth = 1
         
-        //Now Start Anchor Point
+        //Now Start Anchor Point normal way ===============================
         topBar.heightAnchor.constraint(equalToConstant: 201).isActive = true
         topBar.topAnchor.constraint(equalTo: topBar.bottomAnchor, constant: 0).isActive = true
         topBar.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 1).isActive = true
         topBar.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 1).isActive = true 
     }
     
-    
     ...
+    
 ```
-### With AnchorPro System
-### no need type Request every time || `Ex.translatesAutoresizingMaskIntoConstraints = false`
-### and no need type Alone || `topAnchor، bottomAnchor، leadingAnchor،trailingAnchor`
-### and no need type Request every time || `isActive = true`
+### With UIAnchorPro System
+### You do not need to write each time this code || `Ex.translatesAutoresizingMaskIntoConstraints = false`
+### You do not need to write each time a new line to know a certain Anchor || `topAnchor، bottomAnchor، leadingAnchor،trailingAnchor`
+### You do not need to write each time a new line anchor || `isActive = true`
 
-```
-topBar.topAnchor.constraint(equalTo: topBar.bottomAnchor, constant: 0).isActive = true
-topBar.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 1).isActive = true
-topBar.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 1).isActive = true
-```
 ### Just write Anchor || `ex.anchor(...)`
 ### and chose One
 
-![aps1](https://user-images.githubusercontent.com/22422080/36198525-e9808be6-1187-11e8-83ea-1ba391fc5c8f.png)
-![aps2](https://user-images.githubusercontent.com/22422080/36198528-ebc489de-1187-11e8-80e1-d5e78e23e5b2.png)
-![aps3](https://user-images.githubusercontent.com/22422080/36198534-edf90ebe-1187-11e8-86f7-1cbfba183eb3.png)
-![aps4](https://user-images.githubusercontent.com/22422080/36198542-f0124a8a-1187-11e8-89f3-0f26afeadce2.png)
-![aps5](https://user-images.githubusercontent.com/22422080/36198556-f32ca508-1187-11e8-898f-d6908f20be24.png)
-![aps6](https://user-images.githubusercontent.com/22422080/36198559-f5b8174e-1187-11e8-9c62-0b19db5ba469.png)
+![aps0](https://user-images.githubusercontent.com/22422080/36198521-e66e16b2-1187-11e8-8ad7-58fb0476e6ab.png)
+### If you want anchor all Edges write:
+```
+        ex.anchor(view: view)
+```
+### If you want anchor all Edges With Padding write:
+```
+        ex.anchor(TLTBtop: view.topAnchor,
+                  leading: view.leadingAnchor,
+                 trailing: view.trailingAnchor,
+                   bottom: view.bottomAnchor,
+               paddingTop: 10, paddingLeading: 10, paddingTrailing: 10, paddingBottom: 10)
+```
+### Now we know how to use UIAnchorPro
+### To select the appropriate anchor, the abbreviation of each Function is defined
 
+- anchor(TLTBtop... || `Top, Leading, Trailing, Bottom`
+- anchor(TLTtop... || `Top, Leading, Trailing`
+- anchor(BLTbottom... || `Bottom, Leading, Trailing`
+- anchor(TBLtop... || `Top, Bottom, Leading`
+- anchor(TBTtop... || `Top, Bottom, Trailing`
+- anchor(TBtop... || `Top, Bottom`
+- anchor(LTtop... || `Leading, Trailing`
+----------------------------------
+- anchor(top... || `Top`
+- anchor(bottom... || `Bottom`
+- anchor(leading... || `Leading`
+- anchor(trailing... || `Trailing`
+----------------------------------
+- anchor(height... || `Height`
+- anchor(width... || `Width`
+----------------------------------
 
 ## How to use thes library
 ### In the beginning,SetUp UIKitPro in Your project, and the library should be called in the file where the library code will be used as follows:
 ```
 import UIKitPro
 ```
+![aps1](https://user-images.githubusercontent.com/22422080/36198525-e9808be6-1187-11e8-83ea-1ba391fc5c8f.png)
+```
+        ex.anchor(TLTtop: view.topAnchor,
+                  leading: view.leadingAnchor,
+                 trailing: view.trailingAnchor,
+               paddingTop: 10, paddingLeading: 10, paddingTrailing: 10)
+```
+```
+        ex.anchor(BLTbottom: view.bottomAnchor,
+                  leading: view.leadingAnchor,
+                 trailing: view.trailingAnchor,
+               paddingBottom: 10, paddingLeading: 10, paddingTrailing: 10)
+```
+![aps2](https://user-images.githubusercontent.com/22422080/36198528-ebc489de-1187-11e8-80e1-d5e78e23e5b2.png)
+```
+        ex.anchor(TBLtop: view.topAnchor,
+                  bottom: view.bottomAnchor,
+                  leading: view.leadingAnchor,
+               paddingTop: 10, paddingBottom: 10, paddingLeading: 10)
+```
+```
+        ex.anchor(TBTtop: view.topAnchor,
+                  bottom: view.bottomAnchor,
+                trailing: view.trailingAnchor,
+              paddingTop: 10, paddingBottom: 10, paddingTrailing: 10)
+```
+![aps3](https://user-images.githubusercontent.com/22422080/36198534-edf90ebe-1187-11e8-86f7-1cbfba183eb3.png)
+```
+        ex.anchor(TBtop: view.topAnchor,
+                 bottom: view.bottomAnchor,
+             paddingTop: 10, paddingBottom: 10)
+```
+```
+        ex.anchor(LTleading: view.leadingAnchor,
+                   trailing: view.trailingAnchor,
+             paddingLeading: 10, paddingTrailing: 10)
+```
+![aps4](https://user-images.githubusercontent.com/22422080/36198542-f0124a8a-1187-11e8-89f3-0f26afeadce2.png)
+```
+        ex.anchor(top: view.topAnchor, paddingTop: 10)
+```
+```
+        ex.anchor(bottom: view.bottomAnchor, paddingBottom: 10)
+```
+![aps5](https://user-images.githubusercontent.com/22422080/36198556-f32ca508-1187-11e8-898f-d6908f20be24.png)
+```
+        ex.anchor(leading: view.leadingAnchor, paddingLeading: 10)
+```
+```
+        ex.anchor(trailing: view.trailingAnchor, paddingTrailing: 10)
+```
+![aps6](https://user-images.githubusercontent.com/22422080/36198559-f5b8174e-1187-11e8-9c62-0b19db5ba469.png)
+```
+        ex.anchor(height: 100)
+```
+```
+        ex.anchor(width: 100)
+```
 
+## Wait for the next developments
