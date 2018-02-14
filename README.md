@@ -27,7 +27,7 @@
 ![gray](https://user-images.githubusercontent.com/22422080/36191237-3ec0d194-116d-11e8-9aa2-6ccdda03879f.png)
 ![bluegray](https://user-images.githubusercontent.com/22422080/36191234-3c7d1604-116d-11e8-8a52-9979811fd501.png)
 
-## How to use thes library Google Colors
+## How to use thes UIColor Pro library Google Colors Or Other future
 ### In the beginning,SetUp UIKitPro in Your project, and the library should be called in the file where the library code will be used as follows:
 ```
 import UIKitPro
@@ -96,7 +96,7 @@ view.backgroundColor = UIColor.GYellow700
     ...
     
 ```
-### With UIAnchorPro System
+## With UIAnchorPro System
 ### You do not need to write each time this code || `Ex.translatesAutoresizingMaskIntoConstraints = false`
 ### You do not need to write each time a new line to know a certain Anchor || `topAnchor، bottomAnchor، leadingAnchor،trailingAnchor`
 ### You do not need to write each time a new line anchor || `isActive = true`
